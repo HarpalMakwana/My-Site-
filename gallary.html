@@ -1,0 +1,283 @@
+<!-- =========================
+ FUTURE SCIENCE HUB GALLERY
+ Futuristic • Hi-Tech • Responsive
+========================= -->
+
+<section class="future-gallery">
+    <div class="container">
+
+        <div class="gallery-title">
+            <span class="gallery-badge">🚀 FUTURE SCIENCE HUB</span>
+
+            <h2>Innovation Gallery</h2>
+
+            <p>
+                Exploring the Future Through Robotics, IoT, STEM Education,
+                AI, Automation, Embedded Systems and Next-Generation Technologies.
+            </p>
+
+            <div class="tech-line">
+                Robotics • IoT • AI • Automation • Drones • STEM • Innovation
+            </div>
+        </div>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-card">
+                <img src="images/gallery/1.jpg" alt="">
+            </div>
+
+            <div class="gallery-card">
+                <img src="images/gallery/2.jpg" alt="">
+            </div>
+
+            <div class="gallery-card">
+                <img src="images/gallery/3.jpg" alt="">
+            </div>
+
+            <div class="gallery-card">
+                <img src="images/gallery/4.jpg" alt="">
+            </div>
+
+            <div class="gallery-card">
+                <img src="images/gallery/5.jpg" alt="">
+            </div>
+
+            <div class="gallery-card">
+                <img src="images/gallery/6.jpg" alt="">
+            </div>
+
+            <div class="gallery-card">
+                <img src="images/gallery/7.jpg" alt="">
+            </div>
+
+            <div class="gallery-card">
+                <img src="images/gallery/8.jpg" alt="">
+            </div>
+
+            <div class="gallery-card">
+                <img src="images/gallery/9.jpg" alt="">
+            </div>
+
+            <div class="gallery-card">
+                <img src="images/gallery/10.jpg" alt="">
+            </div>
+
+            <div class="gallery-card">
+                <img src="images/gallery/11.jpg" alt="">
+            </div>
+
+            <div class="gallery-card">
+                <img src="images/gallery/12.jpg" alt="">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<style>
+
+/* =========================
+   FUTURE SCIENCE HUB GALLERY
+========================= */
+
+.future-gallery{
+    position:relative;
+    background:#050816;
+    padding:100px 0;
+    overflow:hidden;
+}
+
+/* Animated Background */
+
+.future-gallery::before{
+    content:'';
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:rgba(0,255,255,.08);
+    border-radius:50%;
+    top:-200px;
+    left:-150px;
+    filter:blur(120px);
+}
+
+.future-gallery::after{
+    content:'';
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:rgba(128,0,255,.08);
+    border-radius:50%;
+    bottom:-150px;
+    right:-150px;
+    filter:blur(120px);
+}
+
+/* Heading */
+
+.gallery-title{
+    text-align:center;
+    margin-bottom:60px;
+    position:relative;
+    z-index:2;
+}
+
+.gallery-badge{
+    display:inline-block;
+    padding:10px 25px;
+    border-radius:50px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(0,255,255,.3);
+    color:#00ffff;
+    font-size:14px;
+    letter-spacing:2px;
+    margin-bottom:20px;
+    backdrop-filter:blur(10px);
+}
+
+.gallery-title h2{
+    color:#ffffff;
+    font-size:55px;
+    font-weight:800;
+    text-transform:uppercase;
+    margin-bottom:15px;
+    letter-spacing:3px;
+
+    text-shadow:
+    0 0 10px #00ffff,
+    0 0 20px #00ffff,
+    0 0 40px #00ffff;
+}
+
+.gallery-title p{
+    max-width:800px;
+    margin:auto;
+    color:#b7c5d9;
+    font-size:18px;
+    line-height:30px;
+}
+
+.tech-line{
+    margin-top:20px;
+    color:#00ffff;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+/* Gallery Grid */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    position:relative;
+    z-index:2;
+}
+
+/* Card */
+
+.gallery-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    backdrop-filter:blur(15px);
+
+    transition:.5s ease;
+}
+
+/* Neon Border Glow */
+
+.gallery-card::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+    135deg,
+    rgba(0,255,255,.25),
+    rgba(138,43,226,.25)
+    );
+
+    opacity:0;
+    transition:.5s;
+}
+
+.gallery-card:hover::before{
+    opacity:1;
+}
+
+/* Image */
+
+.gallery-card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    transition:.7s ease;
+}
+
+/* Hover Effect */
+
+.gallery-card:hover{
+    transform:translateY(-12px);
+
+    box-shadow:
+    0 0 20px rgba(0,255,255,.6),
+    0 0 40px rgba(0,255,255,.4),
+    0 0 60px rgba(138,43,226,.3);
+}
+
+.gallery-card:hover img{
+    transform:scale(1.12);
+}
+
+/* Responsive */
+
+@media(max-width:1200px){
+    .gallery-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:992px){
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery-title h2{
+        font-size:42px;
+    }
+}
+
+@media(max-width:576px){
+
+    .future-gallery{
+        padding:70px 0;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-title h2{
+        font-size:30px;
+    }
+
+    .gallery-title p{
+        font-size:15px;
+        line-height:26px;
+    }
+
+    .gallery-card img{
+        height:240px;
+    }
+}
+
+</style>
+
